@@ -356,7 +356,7 @@ globalkeys = awful.util.table.join(
                   awful.tag.viewonly(t)
               end),
     awful.key({modkey}, "a", shifty.add), -- creat a new tag
-    awful.key({modkey,}, "r", shifty.rename), -- rename a tag
+    awful.key({modkey,}, "F2", shifty.rename), -- rename a tag
     awful.key({modkey, "Shift"}, "a", -- nopopup new tag
     function()
         shifty.add({nopopup = true})
@@ -406,14 +406,14 @@ globalkeys = awful.util.table.join(
         function() awful.layout.inc(layouts, -1) end),
 
     -- Prompt
-    awful.key({modkey}, "F1", function()
+    awful.key({modkey}, "r", function()
         awful.prompt.run({prompt = "Run: "},
         mypromptbox[mouse.screen].widget,
         awful.util.spawn, awful.completion.shell,
         awful.util.getdir("cache") .. "/history")
         end),
 
-    awful.key({modkey}, "F4", function()
+    awful.key({modkey}, "e", function()
         awful.prompt.run({prompt = "Run Lua code: "},
         mypromptbox[mouse.screen].widget,
         awful.util.eval, nil,
