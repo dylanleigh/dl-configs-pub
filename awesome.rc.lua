@@ -69,10 +69,10 @@ shifty.config.tags = {
         slave     = true,
     },
     web = {
-        layout      = awful.layout.suit.tile.bottom,
-        mwfact      = 0.65,
+        layout      = awful.layout.suit.tile,
+        mwfact      = 0.95,
         exclusive   = true,
-        max_clients = 1,
+        -- max_clients = 1,
         position    = 2,
         init      = true,
         -- spawn       = browser,
@@ -92,7 +92,7 @@ shifty.config.tags = {
         position  = 7,
     },
     mus = {
-        layout    = awful.layout.suit.magnifier,
+        layout    = awful.layout.suit.tile,
         exclusive = false,
         position  = 8,
         init      = true,
@@ -110,9 +110,11 @@ shifty.config.apps = {
     {
         match = {
             "chromium-browser",
+            "chromium",
             "firefox",
             "midori",
             "Navigator",
+            browser,
         },
         tag = "web",
     },
@@ -139,6 +141,9 @@ shifty.config.apps = {
     },
     {
         match = {
+            "x-terminal-emulator",
+            "rxvt",
+            "xterm",
             terminal,
         },
         honorsizehints = false,
