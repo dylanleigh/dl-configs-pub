@@ -122,14 +122,25 @@ shifty.config.apps = {
         match = {
             "Abiword",
             "Gnumeric",
+            "libreoffice",
         },
         tag = "office",
     },
     {
         match = {
+            "steam",
+            "mednafen",
+            "dosbox",
+            "minetest",
+        },
+        tag = "stm",
+        nopopup = true,
+    },
+    {
+        match = {
             "Mplayer.*",
         },
-        tag = "media",
+        tag = "mus",
         nopopup = true,
     },
     {
